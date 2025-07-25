@@ -1,0 +1,285 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Set up Obsidian vault structure for Life-OS",
+        "description": "Create the foundational directory structure for the ADHD Operating System based on the Life-OS template, including all required folders and initial configuration files",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [],
+        "details": "Implement the complete Life-OS directory structure including: Life-OS (Inbox, Daily, Tasks, Dashboard, Habits, Finance, Config), Claude integration, Work management, Knowledge base, Personal sections, System infrastructure, and Attachments. Each directory should have appropriate emoji prefixes for visual organization.",
+        "testStrategy": "Verify all directories are created with correct structure and permissions. Test that Obsidian can open the vault without errors.",
+        "subtasks": []
+      },
+      {
+        "id": "2",
+        "title": "Implement core daily note system",
+        "description": "Create the daily note template system with ADHD-optimized features including time blocking, energy tracking, and task management",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "1"
+        ],
+        "details": "Build daily note templates that include: morning brain dump section, time blocks with visual indicators, energy level tracking, task list with quick capture, accomplishment celebration section, and evening reflection. Templates should auto-populate with incomplete tasks from previous day.",
+        "testStrategy": "Create sample daily notes for a week and verify template functionality, auto-population of tasks, and time tracking features work correctly.",
+        "subtasks": []
+      },
+      {
+        "id": "3",
+        "title": "Build intelligent task management system",
+        "description": "Develop the ADHD-specific task management system with automatic breakdown, time estimation, and priority management",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "1"
+        ],
+        "details": "Create task templates with fields for: estimated time (with ADHD buffer), actual time tracking, energy level required, complexity score, dependencies, and subtask breakdown. Implement automatic task chunking for tasks over 2 hours. Add visual priority indicators and quick-win identification.",
+        "testStrategy": "Test task creation, automatic breakdown of complex tasks, time tracking accuracy, and priority sorting algorithms.",
+        "subtasks": []
+      },
+      {
+        "id": "4",
+        "title": "Create inbox quick capture system",
+        "description": "Implement a frictionless inbox system for capturing thoughts, tasks, and ideas without context switching",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "1"
+        ],
+        "details": "Build inbox templates with minimal required fields, automatic timestamping, and intelligent categorization. Include voice-to-text support, image capture, and quick sorting mechanisms. Implement daily inbox processing workflows.",
+        "testStrategy": "Test capture speed (must be under 5 seconds), categorization accuracy, and daily processing workflow efficiency.",
+        "subtasks": []
+      },
+      {
+        "id": "5",
+        "title": "Develop focus enhancement tools",
+        "description": "Build the Pomodoro timer system with ADHD adaptations and distraction blocking features",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "2",
+          "3"
+        ],
+        "details": "Create customizable Pomodoro timer with ADHD-friendly intervals (starting at 15 minutes), break reminders with movement suggestions, hyperfocus alerts after extended sessions, and integration with task tracking. Include distraction log for capturing wandering thoughts.",
+        "testStrategy": "Run focus sessions of various lengths, test break reminders, hyperfocus detection, and distraction capture functionality.",
+        "subtasks": []
+      },
+      {
+        "id": "6",
+        "title": "Implement memory augmentation features",
+        "description": "Create the external memory system with session documentation and context preservation",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "1",
+          "3"
+        ],
+        "details": "Build session checkpoint system that captures: current task context, decisions made, next steps, and mental state. Implement smart search across all notes, visual knowledge graphs, and automatic linking of related content.",
+        "testStrategy": "Test checkpoint creation and restoration, search accuracy across large note sets, and knowledge graph visualization.",
+        "subtasks": []
+      },
+      {
+        "id": "7",
+        "title": "Build time awareness visualizations",
+        "description": "Create visual time management tools to combat time blindness",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "2"
+        ],
+        "details": "Implement visual time blocks with color coding, elapsed time indicators on all activities, time estimation vs actual tracking, and progressive deadline alerts. Include calendar integration with buffer time calculations.",
+        "testStrategy": "Verify time visualization accuracy, test deadline alerts at various intervals, and validate calendar sync functionality.",
+        "subtasks": []
+      },
+      {
+        "id": "8",
+        "title": "Create habit tracking system",
+        "description": "Develop visual habit tracking with streak management and reward mechanisms",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "2"
+        ],
+        "details": "Build habit templates with visual progress indicators, streak tracking, flexible scheduling (daily/weekly/custom), and celebration animations. Include habit stacking suggestions and energy-based scheduling.",
+        "testStrategy": "Test habit creation, streak calculation, missed day handling, and reward trigger mechanisms.",
+        "subtasks": []
+      },
+      {
+        "id": "9",
+        "title": "Implement dashboard analytics",
+        "description": "Create comprehensive dashboards for daily, weekly, and monthly progress tracking",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "2",
+          "3",
+          "8"
+        ],
+        "details": "Build dashboards showing: task completion rates, time estimation accuracy, energy patterns, focus session statistics, habit streaks, and productivity trends. Include motivational metrics and achievement celebrations.",
+        "testStrategy": "Verify data aggregation accuracy, test real-time updates, and validate trend calculations over multiple time periods.",
+        "subtasks": []
+      },
+      {
+        "id": "10",
+        "title": "Develop AI integration layer",
+        "description": "Integrate Claude AI for intelligent task breakdown, prioritization, and assistance",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "3"
+        ],
+        "details": "Implement Claude API integration for: automatic task breakdown, intelligent prioritization based on energy and dependencies, session summary generation, and adaptive reminder scheduling. Include natural language task input processing.",
+        "testStrategy": "Test API connectivity, task breakdown quality, prioritization logic, and natural language understanding accuracy.",
+        "subtasks": []
+      },
+      {
+        "id": "11",
+        "title": "Create motivation and reward system",
+        "description": "Build gamification elements and achievement tracking for dopamine regulation",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "3",
+          "8",
+          "9"
+        ],
+        "details": "Implement achievement system with unlockable rewards, task completion animations, streak celebrations, and progress milestones. Include customizable reward preferences and optional social sharing features.",
+        "testStrategy": "Test achievement triggers, reward unlocking logic, animation performance, and user engagement metrics.",
+        "subtasks": []
+      },
+      {
+        "id": "12",
+        "title": "Build overwhelm prevention features",
+        "description": "Create intelligent filtering and progressive disclosure systems to prevent cognitive overload",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "3",
+          "7"
+        ],
+        "details": "Implement 'today only' view, automatic task deferral when overloaded, complexity hiding with progressive disclosure, and emergency brain dump mode. Include breathing exercise prompts during high-stress detection.",
+        "testStrategy": "Test cognitive load detection, task filtering algorithms, and stress intervention trigger accuracy.",
+        "subtasks": []
+      },
+      {
+        "id": "13",
+        "title": "Develop Obsidian plugin architecture",
+        "description": "Create the core Obsidian plugin framework for all ADHD-OS features",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "1"
+        ],
+        "details": "Build modular plugin architecture supporting: hot-reload for development, settings management, command palette integration, and inter-plugin communication. Ensure compatibility with popular Obsidian plugins.",
+        "testStrategy": "Test plugin loading, settings persistence, command registration, and compatibility with top 10 Obsidian plugins.",
+        "subtasks": []
+      },
+      {
+        "id": "14",
+        "title": "Implement mobile PWA companion",
+        "description": "Create progressive web app for mobile quick capture and task management",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [
+          "3",
+          "4"
+        ],
+        "details": "Build PWA with offline support, quick capture interface, task viewing/updating, and timer functions. Include push notifications for reminders and sync with desktop vault.",
+        "testStrategy": "Test offline functionality, sync reliability, notification delivery, and cross-device data consistency.",
+        "subtasks": []
+      },
+      {
+        "id": "15",
+        "title": "Create financial management module",
+        "description": "Build ADHD-friendly financial tracking with impulsivity safeguards",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [
+          "1",
+          "9"
+        ],
+        "details": "Implement expense tracking with receipt photos, budget visualizations, impulsive purchase cooling-off period, and subscription management. Include financial goal gamification.",
+        "testStrategy": "Test transaction entry speed, budget calculation accuracy, and impulsivity intervention effectiveness.",
+        "subtasks": []
+      },
+      {
+        "id": "16",
+        "title": "Build knowledge graph visualization",
+        "description": "Create interactive knowledge graph for discovering connections between notes",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [
+          "6"
+        ],
+        "details": "Implement force-directed graph visualization of note connections, cluster identification for related topics, and interactive exploration. Include search highlighting and connection strength indicators.",
+        "testStrategy": "Test graph rendering performance with 1000+ notes, interaction responsiveness, and cluster detection accuracy.",
+        "subtasks": []
+      },
+      {
+        "id": "17",
+        "title": "Develop template management system",
+        "description": "Create comprehensive template system for all Life-OS components",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "1",
+          "2",
+          "3"
+        ],
+        "details": "Build template library including: daily/weekly/monthly reviews, project planning, meeting notes, and quick capture forms. Include template customization UI and sharing capabilities.",
+        "testStrategy": "Test template creation, variable substitution, and cross-platform compatibility.",
+        "subtasks": []
+      },
+      {
+        "id": "18",
+        "title": "Implement voice integration",
+        "description": "Add voice input capabilities for hands-free capture and command execution",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": [
+          "4",
+          "10"
+        ],
+        "details": "Integrate speech-to-text for quick capture, voice commands for common actions, and audio note transcription. Support multiple languages and accents.",
+        "testStrategy": "Test recognition accuracy in various noise conditions, command execution reliability, and transcription quality.",
+        "subtasks": []
+      },
+      {
+        "id": "19",
+        "title": "Create onboarding experience",
+        "description": "Build progressive onboarding system for new ADHD-OS users",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "details": "Implement interactive tutorial covering core features, personalization wizard for ADHD preferences, and progressive feature unlocking. Include video guides and example vault.",
+        "testStrategy": "Test with new users, measure feature adoption rates, and validate tutorial completion rates.",
+        "subtasks": []
+      },
+      {
+        "id": "20",
+        "title": "Build sync and backup system",
+        "description": "Create secure synchronization and backup infrastructure",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          "1",
+          "13"
+        ],
+        "details": "Implement end-to-end encrypted sync, automatic versioning with rollback, and multi-device conflict resolution. Include local and cloud backup options.",
+        "testStrategy": "Test sync speed, encryption integrity, conflict resolution accuracy, and backup restoration reliability.",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-25T15:47:59.622Z",
+      "updated": "2025-07-25T15:47:59.623Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: Implement core daily note system
+# Status: pending
+# Dependencies: 1 (Not found)
+# Priority: high
+# Description: Create the daily note template system with ADHD-optimized features including time blocking, energy tracking, and task management
+# Details:
+Build daily note templates that include: morning brain dump section, time blocks with visual indicators, energy level tracking, task list with quick capture, accomplishment celebration section, and evening reflection. Templates should auto-populate with incomplete tasks from previous day.
+
+# Test Strategy:
+Create sample daily notes for a week and verify template functionality, auto-population of tasks, and time tracking features work correctly.

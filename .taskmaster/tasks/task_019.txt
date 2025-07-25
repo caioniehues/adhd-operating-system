@@ -1,0 +1,11 @@
+# Task ID: 19
+# Title: Create onboarding experience
+# Status: pending
+# Dependencies: 1 (Not found), 2 (Not found), 3 (Not found), 4 (Not found)
+# Priority: medium
+# Description: Build progressive onboarding system for new ADHD-OS users
+# Details:
+Implement interactive tutorial covering core features, personalization wizard for ADHD preferences, and progressive feature unlocking. Include video guides and example vault.
+
+# Test Strategy:
+Test with new users, measure feature adoption rates, and validate tutorial completion rates.

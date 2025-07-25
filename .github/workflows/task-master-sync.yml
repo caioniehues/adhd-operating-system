@@ -1,0 +1,49 @@
+name: Task Master Sync
+
+on:
+  push:
+    paths:
+      - '.taskmaster/**'
+      - 'README.md'
+  pull_request:
+    paths:
+      - '.taskmaster/**'
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  sync-tasks:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Install Task Master
+      run: npm install -g task-master-ai
+      
+    - name: Sync README with Tasks
+      run: |
+        task-master sync-readme --with-subtasks
+        
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [[ $(git diff --stat) != '' ]]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit and push if changed
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "🤖 Auto-sync: Update README with latest tasks"
+        git push

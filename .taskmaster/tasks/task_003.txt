@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: Build intelligent task management system
+# Status: pending
+# Dependencies: 1 (Not found)
+# Priority: high
+# Description: Develop the ADHD-specific task management system with automatic breakdown, time estimation, and priority management
+# Details:
+Create task templates with fields for: estimated time (with ADHD buffer), actual time tracking, energy level required, complexity score, dependencies, and subtask breakdown. Implement automatic task chunking for tasks over 2 hours. Add visual priority indicators and quick-win identification.
+
+# Test Strategy:
+Test task creation, automatic breakdown of complex tasks, time tracking accuracy, and priority sorting algorithms.

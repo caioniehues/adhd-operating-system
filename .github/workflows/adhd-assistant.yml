@@ -1,0 +1,116 @@
+name: ADHD Assistant - Daily Planning
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Every day at 6 AM
+  workflow_dispatch:
+    inputs:
+      task_focus:
+        description: 'Specific task area to focus on'
+        required: false
+        type: choice
+        options:
+          - 'All pending tasks'
+          - 'High priority only'
+          - 'Quick wins (< 2 hours)'
+          - 'Complex tasks'
+
+jobs:
+  daily-planning:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Install Task Master
+      run: npm install -g task-master-ai
+      
+    - name: Set up API Keys
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        echo "ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY" >> .env
+        
+    - name: Generate Daily Plan
+      run: |
+        # Get next tasks based on dependencies
+        echo "## 📅 Daily Task Plan - $(date +%Y-%m-%d)" > daily-plan.md
+        echo "" >> daily-plan.md
+        
+        # Show next available tasks
+        echo "### 🎯 Next Available Tasks" >> daily-plan.md
+        task-master next >> daily-plan.md
+        echo "" >> daily-plan.md
+        
+        # List high priority tasks
+        echo "### ⚡ High Priority Tasks" >> daily-plan.md
+        task-master list --status=pending --priority=high >> daily-plan.md
+        echo "" >> daily-plan.md
+        
+        # Show task breakdown recommendations
+        echo "### 🔍 Tasks Needing Breakdown" >> daily-plan.md
+        task-master analyze-complexity --threshold=5 >> daily-plan.md
+        
+    - name: Create Daily Issue
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const plan = fs.readFileSync('daily-plan.md', 'utf8');
+          
+          const today = new Date().toISOString().split('T')[0];
+          
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: `📅 Daily Plan - ${today}`,
+            body: plan,
+            labels: ['daily-plan', 'adhd-support']
+          });
+
+  focus-timer:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Create Focus Session Issue
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const focus = '${{ github.event.inputs.task_focus }}' || 'All pending tasks';
+          
+          const pomodoro = `## 🍅 Focus Session Plan
+          
+          **Focus Area**: ${focus}
+          
+          ### ⏱️ Pomodoro Schedule
+          - [ ] 25 min - Task work
+          - [ ] 5 min - Break
+          - [ ] 25 min - Task work
+          - [ ] 5 min - Break
+          - [ ] 25 min - Task work
+          - [ ] 5 min - Break
+          - [ ] 25 min - Task work
+          - [ ] 15 min - Long break
+          
+          ### 📝 Session Notes
+          _Add your progress here..._
+          
+          ### ✅ Completed
+          _List what you accomplished..._
+          `;
+          
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: `🍅 Focus Session - ${new Date().toISOString().split('T')[0]}`,
+            body: pomodoro,
+            labels: ['focus-session', 'adhd-support']
+          });

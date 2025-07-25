@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: Implement memory augmentation features
+# Status: pending
+# Dependencies: 1 (Not found), 3 (Not found)
+# Priority: medium
+# Description: Create the external memory system with session documentation and context preservation
+# Details:
+Build session checkpoint system that captures: current task context, decisions made, next steps, and mental state. Implement smart search across all notes, visual knowledge graphs, and automatic linking of related content.
+
+# Test Strategy:
+Test checkpoint creation and restoration, search accuracy across large note sets, and knowledge graph visualization.
