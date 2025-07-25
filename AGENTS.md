@@ -1,38 +1,38 @@
-# Task Master AI - Agent Integration Guide
+# Task Master AI - Guia de Integração de Agentes
 
-## Essential Commands
+## Comandos Essenciais
 
-### Core Workflow Commands
+### Comandos de Fluxo de Trabalho Principal
 
 ```bash
-# Project Setup
-task-master init                                    # Initialize Task Master in current project
-task-master parse-prd .taskmaster/docs/prd.txt      # Generate tasks from PRD document
-task-master models --setup                        # Configure AI models interactively
+# Configuração do Projeto
+task-master init                                    # Inicializar Task Master no projeto atual
+task-master parse-prd .taskmaster/docs/prd.txt      # Gerar tarefas do documento PRD
+task-master models --setup                        # Configurar modelos de IA interativamente
 
-# Daily Development Workflow
-task-master list                                   # Show all tasks with status
-task-master next                                   # Get next available task to work on
-task-master show <id>                             # View detailed task information (e.g., task-master show 1.2)
-task-master set-status --id=<id> --status=done    # Mark task complete
+# Fluxo de Trabalho de Desenvolvimento Diário
+task-master list                                   # Mostrar todas as tarefas com status
+task-master next                                   # Obter próxima tarefa disponível para trabalhar
+task-master show <id>                             # Ver informações detalhadas da tarefa (ex: task-master show 1.2)
+task-master set-status --id=<id> --status=done    # Marcar tarefa como completa
 
-# Task Management
-task-master add-task --prompt="description" --research        # Add new task with AI assistance
-task-master expand --id=<id> --research --force              # Break task into subtasks
-task-master update-task --id=<id> --prompt="changes"         # Update specific task
-task-master update --from=<id> --prompt="changes"            # Update multiple tasks from ID onwards
-task-master update-subtask --id=<id> --prompt="notes"        # Add implementation notes to subtask
+# Gerenciamento de Tarefas
+task-master add-task --prompt="descrição" --research        # Adicionar nova tarefa com assistência de IA
+task-master expand --id=<id> --research --force              # Dividir tarefa em subtarefas
+task-master update-task --id=<id> --prompt="mudanças"         # Atualizar tarefa específica
+task-master update --from=<id> --prompt="mudanças"            # Atualizar múltiplas tarefas a partir do ID
+task-master update-subtask --id=<id> --prompt="notas"        # Adicionar notas de implementação à subtarefa
 
-# Analysis & Planning
-task-master analyze-complexity --research          # Analyze task complexity
-task-master complexity-report                      # View complexity analysis
-task-master expand --all --research               # Expand all eligible tasks
+# Análise e Planejamento
+task-master analyze-complexity --research          # Analisar complexidade da tarefa
+task-master complexity-report                      # Ver análise de complexidade
+task-master expand --all --research               # Expandir todas as tarefas elegíveis
 
-# Dependencies & Organization
-task-master add-dependency --id=<id> --depends-on=<id>       # Add task dependency
-task-master move --from=<id> --to=<id>                       # Reorganize task hierarchy
-task-master validate-dependencies                            # Check for dependency issues
-task-master generate                                         # Update task markdown files (usually auto-called)
+# Dependências e Organização
+task-master add-dependency --id=<id> --depends-on=<id>       # Adicionar dependência de tarefa
+task-master move --from=<id> --to=<id>                       # Reorganizar hierarquia de tarefas
+task-master validate-dependencies                            # Verificar problemas de dependências
+task-master generate                                         # Atualizar arquivos markdown de tarefas (geralmente auto-chamado)
 ```
 
 ## Key Files & Project Structure

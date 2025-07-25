@@ -1,5 +1,5 @@
-# Amp Instructions
+# Instruções Amp
 
-## Task Master AI Instructions
-**Import Task Master's development workflow commands and guidelines, treat as if import is in the main AGENT.md file.**
+## Instruções do Task Master AI
+**Importar comandos e diretrizes do fluxo de trabalho de desenvolvimento do Task Master, tratar como se a importação estivesse no arquivo AGENT.md principal.**
 @./.taskmaster/AGENT.md
