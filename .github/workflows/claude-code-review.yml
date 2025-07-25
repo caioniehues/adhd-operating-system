@@ -2,58 +2,83 @@ name: Claude Code Review
 
 on:
   pull_request:
-    types: [opened, synchronize]
-    # Optional: Only run on specific file changes
-    # paths:
-    #   - "src/**/*.ts"
-    #   - "src/**/*.tsx"
-    #   - "src/**/*.js"
-    #   - "src/**/*.jsx"
+    types: [opened, synchronize, reopened]
+    paths:
+      - "src/**/*.ts"
+      - "src/**/*.tsx"
+      - "main.ts"
+      - "manifest.json"
+      - "**/*.test.ts"
 
 jobs:
   claude-review:
-    # Optional: Filter by PR author
-    # if: |
-    #   github.event.pull_request.user.login == 'external-contributor' ||
-    #   github.event.pull_request.user.login == 'new-developer' ||
-    #   github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR'
-    
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: read
-      issues: read
-      id-token: write
+      pull-requests: write
+      issues: write
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Run Claude Code Review
         id: claude-review
-        uses: anthropics/claude-code-action@beta
+        uses: anthropics/claude-code-action@main
         with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-
-          # Optional: Specify model (defaults to Claude Sonnet 4, uncomment for Claude Opus 4)
-          # model: "claude-opus-4-20250514"
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           
-          # Direct prompt for automated review (no @claude mention needed)
+          # Direct prompt for ADHD-OS specific review
           direct_prompt: |
-            Please review this pull request and provide feedback on:
-            - Code quality and best practices
-            - Potential bugs or issues
-            - Performance considerations
-            - Security concerns
-            - Test coverage
+            Please review this pull request for the ADHD Operating System (ADHD-OS) Obsidian plugin.
             
-            Be constructive and helpful in your feedback.
+            Focus on these ADHD-specific aspects:
+            
+            1. **Cognitive Load & Simplicity**:
+               - Is the UI/UX simple and not overwhelming?
+               - Are there too many options or decisions presented at once?
+               - Is progressive disclosure used appropriately?
+            
+            2. **ADHD-Friendly Features**:
+               - Clear visual feedback and indicators
+               - Appropriate use of colors and contrast
+               - Support for quick capture without friction
+               - Time awareness considerations
+               - Crisis mode support
+            
+            3. **Code Quality**:
+               - TypeScript best practices and type safety
+               - Obsidian plugin API usage
+               - Performance (especially for users with many notes)
+               - Memory management
+               - Error handling with helpful messages
+            
+            4. **Accessibility**:
+               - WCAG AA compliance
+               - Keyboard navigation support
+               - Screen reader compatibility
+               - Cognitive accessibility features
+               - Clear labeling and instructions
+            
+            5. **Testing**:
+               - Are tests included for new features?
+               - Do tests cover ADHD-specific scenarios?
+               - Edge cases for overwhelm/crisis situations?
+            
+            Provide specific, actionable feedback. Be encouraging and constructive.
+            Remember: This plugin helps users with ADHD manage their lives better.
 
-          # Optional: Use sticky comments to make Claude reuse the same comment on subsequent pushes to the same PR
-          # use_sticky_comment: true
+          # Use sticky comments to update the same review comment
+          use_sticky_comment: true
           
+          # Timeout for the review
+          timeout_minutes: "10"
+          
+          # Maximum conversation turns
+          max_turns: "5"
           # Optional: Customize review based on file types
           # direct_prompt: |
           #   Review this PR focusing on:

@@ -1,0 +1,65 @@
+name: Claude Issue to PR
+
+on:
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened, assigned]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  claude-issue-handler:
+    # Only run if @claude is mentioned
+    if: |
+      contains(github.event.comment.body, '@claude') ||
+      contains(github.event.issue.body, '@claude')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Claude Issue Handler
+        uses: anthropics/claude-code-action@main
+        with:
+          trigger_phrase: "@claude"
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          timeout_minutes: "25"
+          max_turns: "15"
+          
+          # Custom context for ADHD-OS
+          context_message: |
+            You are helping implement features for the ADHD Operating System (ADHD-OS), 
+            an Obsidian plugin designed specifically for users with ADHD.
+            
+            Key project principles:
+            - Simplicity over complexity
+            - Clear visual feedback
+            - Minimal cognitive load
+            - Support for ADHD challenges (time blindness, overwhelm, focus)
+            - Progressive disclosure of features
+            - Forgiving and encouraging UX
+            
+            When implementing features:
+            1. Follow TypeScript best practices
+            2. Use Obsidian plugin APIs correctly
+            3. Include tests for new functionality
+            4. Consider ADHD-specific edge cases
+            5. Add helpful error messages
+            6. Document complex logic
+            
+            Available commands:
+            - "implement this": Create a PR implementing the described feature
+            - "fix this bug": Debug and fix the reported issue
+            - "how should I": Provide implementation guidance
+            - "create tests": Generate test cases for the feature
+            
+            Always create focused, single-purpose PRs that are easy to review.

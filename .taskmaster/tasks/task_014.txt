@@ -1,11 +1,28 @@
 # Task ID: 14
-# Title: Implement mobile PWA companion
+# Title: Integrate Claude AI for intelligent assistance
 # Status: pending
-# Dependencies: 3 (Not found), 4 (Not found)
-# Priority: low
-# Description: Create progressive web app for mobile quick capture and task management
+# Dependencies: 5
+# Priority: high
+# Description: Implement AI layer using Claude API for task breakdown, prioritization, time estimation, and personalized ADHD support
 # Details:
-Build PWA with offline support, quick capture interface, task viewing/updating, and timer functions. Include push notifications for reminders and sync with desktop vault.
+1. Set up Claude API integration:
+   - API key management
+   - Request/response handling
+   - Error handling and fallbacks
+   - Rate limiting
+2. Implement AI features:
+   - Intelligent task breakdown
+   - Natural language task input
+   - Priority suggestions
+   - Time estimation learning
+   - Pattern recognition
+3. Build ADHD-specific AI:
+   - Personalized recommendations
+   - Overwhelm prediction
+   - Energy-based scheduling
+   - Procrastination intervention
+4. Create AI settings panel
+5. Implement privacy controls
 
 # Test Strategy:
-Test offline functionality, sync reliability, notification delivery, and cross-device data consistency.
+Test API integration. Verify AI suggestions quality. Test fallback behavior. Validate privacy controls.

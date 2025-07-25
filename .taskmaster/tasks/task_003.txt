@@ -1,11 +1,24 @@
 # Task ID: 3
-# Title: Build intelligent task management system
+# Title: Implement Life-OS vault structure
 # Status: pending
-# Dependencies: 1 (Not found)
+# Dependencies: 2
 # Priority: high
-# Description: Develop the ADHD-specific task management system with automatic breakdown, time estimation, and priority management
+# Description: Create the foundational directory structure for the ADHD Operating System based on Life-OS template with all required folders and configurations
 # Details:
-Create task templates with fields for: estimated time (with ADHD buffer), actual time tracking, energy level required, complexity score, dependencies, and subtask breakdown. Implement automatic task chunking for tasks over 2 hours. Add visual priority indicators and quick-win identification.
+1. Design comprehensive folder hierarchy
+2. Create directory structure:
+   - 📥 Inbox (quick capture)
+   - 📅 Daily (daily notes)
+   - ✅ Tasks (task management)
+   - 📊 Dashboard (analytics)
+   - 🎯 Habits (tracking)
+   - 💰 Finance (ADHD-friendly)
+   - ⚙️ Config (settings)
+   - 🤖 Claude (AI integration)
+3. Implement vault initialization wizard
+4. Create folder templates and metadata
+5. Set up automatic folder creation on plugin install
+6. Configure folder icons and visual hierarchy
 
 # Test Strategy:
-Test task creation, automatic breakdown of complex tasks, time tracking accuracy, and priority sorting algorithms.
+Verify complete folder structure creation. Test vault initialization on fresh Obsidian instance. Validate folder permissions.

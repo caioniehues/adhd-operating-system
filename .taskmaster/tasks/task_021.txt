@@ -1,0 +1,32 @@
+# Task ID: 21
+# Title: Create comprehensive testing framework
+# Status: pending
+# Dependencies: 1, 2
+# Priority: high
+# Description: Build testing infrastructure including unit tests, integration tests, E2E tests, and ADHD user testing protocols
+# Details:
+1. Set up testing infrastructure:
+   - Vitest for unit testing
+   - Integration test suite
+   - E2E with Playwright
+   - Performance testing
+   - Accessibility testing
+2. Create test coverage:
+   - Core functionality (80% min)
+   - API endpoints
+   - UI components
+   - Data integrity
+   - Sync reliability
+3. Build ADHD-specific tests:
+   - Cognitive load testing
+   - Overwhelm scenarios
+   - Time awareness accuracy
+   - Focus feature validation
+4. Implement CI/CD testing:
+   - Automated test runs
+   - Coverage reports
+   - Performance benchmarks
+5. User testing protocols
+
+# Test Strategy:
+Meta - test the testing framework itself. Verify coverage accuracy. Test CI/CD integration.

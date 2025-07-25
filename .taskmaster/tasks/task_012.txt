@@ -1,11 +1,30 @@
 # Task ID: 12
-# Title: Build overwhelm prevention features
+# Title: Build gamification and reward system
 # Status: pending
-# Dependencies: 3 (Not found), 7 (Not found)
-# Priority: high
-# Description: Create intelligent filtering and progressive disclosure systems to prevent cognitive overload
+# Dependencies: 5, 11
+# Priority: medium
+# Description: Create dopamine-driven engagement system with XP, achievements, levels, and meaningful rewards tailored for ADHD motivation
 # Details:
-Implement 'today only' view, automatic task deferral when overloaded, complexity hiding with progressive disclosure, and emergency brain dump mode. Include breathing exercise prompts during high-stress detection.
+1. Implement XP and leveling:
+   - Task completion XP
+   - Bonus XP for streaks
+   - Level progression system
+   - Visual level-up celebrations
+2. Create achievement system:
+   - 100+ achievement types
+   - Hidden achievements for discovery
+   - Achievement categories
+   - Custom achievement creation
+3. Build reward mechanics:
+   - Immediate feedback
+   - Random bonus rewards
+   - Daily quests
+   - Weekly challenges
+4. Add social features (optional):
+   - Share achievements
+   - Leaderboards
+   - Team challenges
+5. Implement anti-gaming measures
 
 # Test Strategy:
-Test cognitive load detection, task filtering algorithms, and stress intervention trigger accuracy.
+Test XP calculations. Verify achievement triggers. Test reward distribution. Validate anti-cheating measures.

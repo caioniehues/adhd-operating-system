@@ -1,11 +1,26 @@
 # Task ID: 10
-# Title: Develop AI integration layer
+# Title: Implement crisis management mode
 # Status: pending
-# Dependencies: 3 (Not found)
+# Dependencies: 5, 8
 # Priority: high
-# Description: Integrate Claude AI for intelligent task breakdown, prioritization, and assistance
+# Description: Create overwhelm intervention system with panic button activation, task simplification, and supportive features
 # Details:
-Implement Claude API integration for: automatic task breakdown, intelligent prioritization based on energy and dependencies, session summary generation, and adaptive reminder scheduling. Include natural language task input processing.
+1. Build crisis mode activation:
+   - Single-tap panic button
+   - Keyboard shortcut (Cmd+Shift+H)
+   - Voice activation option
+2. Implement crisis features:
+   - Simplify to 3 essential tasks only
+   - Hide all non-critical information
+   - Soothing color scheme
+   - Breathing exercise integration
+   - Supportive messaging
+3. Create automated responses:
+   - Calendar clearing options
+   - Auto-email templates
+   - Task rescheduling
+4. Add recovery tracking
+5. Build crisis prevention alerts
 
 # Test Strategy:
-Test API connectivity, task breakdown quality, prioritization logic, and natural language understanding accuracy.
+Test panic button activation. Verify task simplification. Test breathing exercises. Validate recovery tracking.

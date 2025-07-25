@@ -1,11 +1,27 @@
 # Task ID: 15
-# Title: Create financial management module
+# Title: Implement calendar synchronization
 # Status: pending
-# Dependencies: 1 (Not found), 9 (Not found)
-# Priority: low
-# Description: Build ADHD-friendly financial tracking with impulsivity safeguards
+# Dependencies: 8
+# Priority: high
+# Description: Create bi-directional calendar sync with Google Calendar and Outlook, including buffer time injection and conflict resolution
 # Details:
-Implement expense tracking with receipt photos, budget visualizations, impulsive purchase cooling-off period, and subscription management. Include financial goal gamification.
+1. Build calendar integrations:
+   - Google Calendar OAuth setup
+   - Outlook/Exchange connection
+   - iCal subscription support
+   - API authentication handling
+2. Implement sync features:
+   - Bi-directional sync
+   - Real-time updates via webhooks
+   - Conflict resolution UI
+   - Selective sync options
+3. Add ADHD features:
+   - Automatic buffer time (15-30min)
+   - Travel time calculation
+   - Prep time reminders
+   - Energy-based scheduling
+4. Create sync settings
+5. Build offline queue
 
 # Test Strategy:
-Test transaction entry speed, budget calculation accuracy, and impulsivity intervention effectiveness.
+Test OAuth flows. Verify sync accuracy. Test conflict resolution. Validate buffer time injection.
