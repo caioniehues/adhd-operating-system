@@ -1,0 +1,44 @@
+{
+  "name": "adhd-operating-system",
+  "version": "0.1.0",
+  "description": "A comprehensive digital productivity platform designed specifically for the ADHD brain",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "task": "task-master",
+    "task:next": "task-master next",
+    "task:list": "task-master list",
+    "task:sync": "task-master sync-readme --with-subtasks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/adhd-operating-system.git"
+  },
+  "keywords": [
+    "adhd",
+    "productivity",
+    "obsidian",
+    "task-management",
+    "life-os",
+    "neurodiversity"
+  ],
+  "author": "ADHD-OS Contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/adhd-operating-system/issues"
+  },
+  "homepage": "https://github.com/yourusername/adhd-operating-system#readme",
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.0"
+  },
+  "dependencies": {
+    "task-master-ai": "^2.0.0"
+  }
+}

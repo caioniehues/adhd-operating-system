@@ -1,0 +1,11 @@
+# Task ID: 8
+# Title: Create habit tracking system
+# Status: pending
+# Dependencies: 2 (Not found)
+# Priority: medium
+# Description: Develop visual habit tracking with streak management and reward mechanisms
+# Details:
+Build habit templates with visual progress indicators, streak tracking, flexible scheduling (daily/weekly/custom), and celebration animations. Include habit stacking suggestions and energy-based scheduling.
+
+# Test Strategy:
+Test habit creation, streak calculation, missed day handling, and reward trigger mechanisms.

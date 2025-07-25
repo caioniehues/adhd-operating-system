@@ -1,0 +1,11 @@
+# Task ID: 14
+# Title: Implement mobile PWA companion
+# Status: pending
+# Dependencies: 3 (Not found), 4 (Not found)
+# Priority: low
+# Description: Create progressive web app for mobile quick capture and task management
+# Details:
+Build PWA with offline support, quick capture interface, task viewing/updating, and timer functions. Include push notifications for reminders and sync with desktop vault.
+
+# Test Strategy:
+Test offline functionality, sync reliability, notification delivery, and cross-device data consistency.

@@ -1,0 +1,134 @@
+name: PR Task Helper
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  task-analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Install Task Master
+      run: npm install -g task-master-ai
+      
+    - name: Analyze PR Changes
+      id: analyze
+      run: |
+        # Get changed files
+        git diff --name-only origin/${{ github.base_ref }}...${{ github.sha }} > changed_files.txt
+        
+        # Check if any tasks were modified
+        if grep -q "\.taskmaster/tasks\.json" changed_files.txt; then
+          echo "tasks_changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "tasks_changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Generate Task Report
+      if: steps.analyze.outputs.tasks_changed == 'true'
+      run: |
+        echo "## 📋 Task Changes in this PR" > task-report.md
+        echo "" >> task-report.md
+        
+        # Show current task status
+        echo "### Current Task Status" >> task-report.md
+        task-master list --with-subtasks >> task-report.md
+        echo "" >> task-report.md
+        
+        # Show task dependencies
+        echo "### Task Dependencies" >> task-report.md
+        task-master validate-dependencies >> task-report.md
+        
+    - name: Comment Task Report
+      if: steps.analyze.outputs.tasks_changed == 'true'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const report = fs.readFileSync('task-report.md', 'utf8');
+          
+          // Find existing comment
+          const comments = await github.rest.issues.listComments({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo
+          });
+          
+          const botComment = comments.data.find(comment => 
+            comment.user.type === 'Bot' && comment.body.includes('📋 Task Changes')
+          );
+          
+          if (botComment) {
+            // Update existing comment
+            await github.rest.issues.updateComment({
+              comment_id: botComment.id,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report
+            });
+          } else {
+            // Create new comment
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report
+            });
+          }
+
+  suggest-tasks:
+    runs-on: ubuntu-latest
+    if: github.event.action == 'opened'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Create Task Suggestions
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const prTitle = context.payload.pull_request.title;
+          const prBody = context.payload.pull_request.body || '';
+          
+          const suggestions = `## 🤖 Task Suggestions for this PR
+          
+          Based on your PR "${prTitle}", here are some suggested tasks to track:
+          
+          ### 📝 Suggested Tasks:
+          1. **Code Review** - Review and approve implementation
+          2. **Testing** - Write/update tests for new functionality
+          3. **Documentation** - Update relevant documentation
+          4. **Integration** - Ensure compatibility with existing features
+          
+          ### 💡 ADHD-Friendly Tips:
+          - Break down large changes into smaller, reviewable chunks
+          - Use the checklist below to track your progress
+          - Take regular breaks during review (Pomodoro technique)
+          
+          ### ✅ PR Checklist:
+          - [ ] Code follows project standards
+          - [ ] Tests are passing
+          - [ ] Documentation is updated
+          - [ ] No console.log or debug code
+          - [ ] Changes are focused and atomic
+          
+          ---
+          💡 **Tip**: Use \`task-master add-task --prompt="[your task]"\` to add these to your task list!
+          `;
+          
+          await github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: suggestions
+          });

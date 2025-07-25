@@ -1,0 +1,11 @@
+# Task ID: 12
+# Title: Build overwhelm prevention features
+# Status: pending
+# Dependencies: 3 (Not found), 7 (Not found)
+# Priority: high
+# Description: Create intelligent filtering and progressive disclosure systems to prevent cognitive overload
+# Details:
+Implement 'today only' view, automatic task deferral when overloaded, complexity hiding with progressive disclosure, and emergency brain dump mode. Include breathing exercise prompts during high-stress detection.
+
+# Test Strategy:
+Test cognitive load detection, task filtering algorithms, and stress intervention trigger accuracy.

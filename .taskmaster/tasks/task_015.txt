@@ -1,0 +1,11 @@
+# Task ID: 15
+# Title: Create financial management module
+# Status: pending
+# Dependencies: 1 (Not found), 9 (Not found)
+# Priority: low
+# Description: Build ADHD-friendly financial tracking with impulsivity safeguards
+# Details:
+Implement expense tracking with receipt photos, budget visualizations, impulsive purchase cooling-off period, and subscription management. Include financial goal gamification.
+
+# Test Strategy:
+Test transaction entry speed, budget calculation accuracy, and impulsivity intervention effectiveness.

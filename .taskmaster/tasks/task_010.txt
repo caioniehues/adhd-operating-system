@@ -1,0 +1,11 @@
+# Task ID: 10
+# Title: Develop AI integration layer
+# Status: pending
+# Dependencies: 3 (Not found)
+# Priority: high
+# Description: Integrate Claude AI for intelligent task breakdown, prioritization, and assistance
+# Details:
+Implement Claude API integration for: automatic task breakdown, intelligent prioritization based on energy and dependencies, session summary generation, and adaptive reminder scheduling. Include natural language task input processing.
+
+# Test Strategy:
+Test API connectivity, task breakdown quality, prioritization logic, and natural language understanding accuracy.

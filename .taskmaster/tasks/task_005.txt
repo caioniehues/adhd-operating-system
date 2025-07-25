@@ -1,0 +1,11 @@
+# Task ID: 5
+# Title: Develop focus enhancement tools
+# Status: pending
+# Dependencies: 2 (Not found), 3 (Not found)
+# Priority: medium
+# Description: Build the Pomodoro timer system with ADHD adaptations and distraction blocking features
+# Details:
+Create customizable Pomodoro timer with ADHD-friendly intervals (starting at 15 minutes), break reminders with movement suggestions, hyperfocus alerts after extended sessions, and integration with task tracking. Include distraction log for capturing wandering thoughts.
+
+# Test Strategy:
+Run focus sessions of various lengths, test break reminders, hyperfocus detection, and distraction capture functionality.

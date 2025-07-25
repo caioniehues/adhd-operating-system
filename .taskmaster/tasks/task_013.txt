@@ -1,0 +1,11 @@
+# Task ID: 13
+# Title: Develop Obsidian plugin architecture
+# Status: pending
+# Dependencies: 1 (Not found)
+# Priority: high
+# Description: Create the core Obsidian plugin framework for all ADHD-OS features
+# Details:
+Build modular plugin architecture supporting: hot-reload for development, settings management, command palette integration, and inter-plugin communication. Ensure compatibility with popular Obsidian plugins.
+
+# Test Strategy:
+Test plugin loading, settings persistence, command registration, and compatibility with top 10 Obsidian plugins.
