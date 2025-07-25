@@ -11,12 +11,17 @@ on:
       - 'README.md'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   sync-tasks:
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -46,4 +51,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add README.md
         git commit -m "🤖 Auto-sync: Update README with latest tasks"
-        git push
+        git push origin HEAD:${{ github.ref }}
