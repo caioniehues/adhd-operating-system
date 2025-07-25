@@ -5,10 +5,6 @@ on:
     paths:
       - '.taskmaster/**'
       - 'README.md'
-  pull_request:
-    paths:
-      - '.taskmaster/**'
-      - 'README.md'
   workflow_dispatch:
 
 permissions:
@@ -51,4 +47,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add README.md
         git commit -m "🤖 Auto-sync: Update README with latest tasks"
-        git push origin HEAD:${{ github.ref }}
+        git push
