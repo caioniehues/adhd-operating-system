@@ -32,9 +32,9 @@ jobs:
       
     - name: Set up API Keys
       env:
-        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       run: |
-        echo "ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY" >> .env
+        echo "CLAUDE_CODE_OAUTH_TOKEN=$CLAUDE_CODE_OAUTH_TOKEN" >> .env
         
     - name: Generate Daily Plan
       run: |

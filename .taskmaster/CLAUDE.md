@@ -8,7 +8,7 @@
 # Configuração do Projeto
 task-master init                                    # Inicializar Task Master no projeto atual
 task-master parse-prd .taskmaster/docs/prd.txt      # Gerar tarefas do documento PRD
-task-master models --setup                        # Configurar modelos de IA interativamente
+task-master models --setup                        # Configurar modelos de IA interativamente (com OAuth)
 
 # Fluxo de Trabalho de Desenvolvimento Diário
 task-master list                                   # Mostrar todas as tarefas com status
@@ -87,7 +87,7 @@ O Task Master fornece um servidor MCP ao qual o Claude Code pode se conectar. Co
       "command": "npx",
       "args": ["-y", "--package=task-master-ai", "task-master-ai"],
       "env": {
-        "ANTHROPIC_API_KEY": "your_key_here",
+        "CLAUDE_CODE_OAUTH_TOKEN": "your_oauth_token_here",
         "PERPLEXITY_API_KEY": "your_key_here",
         "OPENAI_API_KEY": "OPENAI_API_KEY_HERE",
         "GOOGLE_API_KEY": "GOOGLE_API_KEY_HERE",
@@ -229,7 +229,7 @@ Add to `.claude/settings.json`:
 
 At least **one** of these API keys must be configured:
 
-- `ANTHROPIC_API_KEY` (Claude models) - **Recommended**
+- `CLAUDE_CODE_OAUTH_TOKEN` (Claude Code models) - **Recommended**
 - `PERPLEXITY_API_KEY` (Research features) - **Highly recommended**
 - `OPENAI_API_KEY` (GPT models)
 - `GOOGLE_API_KEY` (Gemini models)
