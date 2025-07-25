@@ -1,56 +1,56 @@
-# Task Master AI - Agent Integration Guide
+# Task Master AI - Guia de Integração de Agentes
 
-## Essential Commands
+## Comandos Essenciais
 
-### Core Workflow Commands
+### Comandos de Fluxo de Trabalho Principal
 
 ```bash
-# Project Setup
-task-master init                                    # Initialize Task Master in current project
-task-master parse-prd .taskmaster/docs/prd.txt      # Generate tasks from PRD document
-task-master models --setup                        # Configure AI models interactively
+# Configuração do Projeto
+task-master init                                    # Inicializar Task Master no projeto atual
+task-master parse-prd .taskmaster/docs/prd.txt      # Gerar tarefas do documento PRD
+task-master models --setup                        # Configurar modelos de IA interativamente
 
-# Daily Development Workflow
-task-master list                                   # Show all tasks with status
-task-master next                                   # Get next available task to work on
-task-master show <id>                             # View detailed task information (e.g., task-master show 1.2)
-task-master set-status --id=<id> --status=done    # Mark task complete
+# Fluxo de Trabalho de Desenvolvimento Diário
+task-master list                                   # Mostrar todas as tarefas com status
+task-master next                                   # Obter próxima tarefa disponível para trabalhar
+task-master show <id>                             # Ver informações detalhadas da tarefa (ex: task-master show 1.2)
+task-master set-status --id=<id> --status=done    # Marcar tarefa como completa
 
-# Task Management
-task-master add-task --prompt="description" --research        # Add new task with AI assistance
-task-master expand --id=<id> --research --force              # Break task into subtasks
-task-master update-task --id=<id> --prompt="changes"         # Update specific task
-task-master update --from=<id> --prompt="changes"            # Update multiple tasks from ID onwards
-task-master update-subtask --id=<id> --prompt="notes"        # Add implementation notes to subtask
+# Gerenciamento de Tarefas
+task-master add-task --prompt="descrição" --research        # Adicionar nova tarefa com assistência de IA
+task-master expand --id=<id> --research --force              # Dividir tarefa em subtarefas
+task-master update-task --id=<id> --prompt="mudanças"         # Atualizar tarefa específica
+task-master update --from=<id> --prompt="mudanças"            # Atualizar múltiplas tarefas a partir do ID
+task-master update-subtask --id=<id> --prompt="notas"        # Adicionar notas de implementação à subtarefa
 
-# Analysis & Planning
-task-master analyze-complexity --research          # Analyze task complexity
-task-master complexity-report                      # View complexity analysis
-task-master expand --all --research               # Expand all eligible tasks
+# Análise e Planejamento
+task-master analyze-complexity --research          # Analisar complexidade da tarefa
+task-master complexity-report                      # Ver análise de complexidade
+task-master expand --all --research               # Expandir todas as tarefas elegíveis
 
-# Dependencies & Organization
-task-master add-dependency --id=<id> --depends-on=<id>       # Add task dependency
-task-master move --from=<id> --to=<id>                       # Reorganize task hierarchy
-task-master validate-dependencies                            # Check for dependency issues
-task-master generate                                         # Update task markdown files (usually auto-called)
+# Dependências e Organização
+task-master add-dependency --id=<id> --depends-on=<id>       # Adicionar dependência de tarefa
+task-master move --from=<id> --to=<id>                       # Reorganizar hierarquia de tarefas
+task-master validate-dependencies                            # Verificar problemas de dependências
+task-master generate                                         # Atualizar arquivos markdown de tarefas (geralmente auto-chamado)
 ```
 
-## Key Files & Project Structure
+## Arquivos Principais e Estrutura do Projeto
 
-### Core Files
+### Arquivos Centrais
 
-- `.taskmaster/tasks/tasks.json` - Main task data file (auto-managed)
-- `.taskmaster/config.json` - AI model configuration (use `task-master models` to modify)
-- `.taskmaster/docs/prd.txt` - Product Requirements Document for parsing
-- `.taskmaster/tasks/*.txt` - Individual task files (auto-generated from tasks.json)
-- `.env` - API keys for CLI usage
+- `.taskmaster/tasks/tasks.json` - Arquivo principal de dados de tarefas (auto-gerenciado)
+- `.taskmaster/config.json` - Configuração de modelos de IA (use `task-master models` para modificar)
+- `.taskmaster/docs/prd.txt` - Documento de Requisitos do Produto para análise
+- `.taskmaster/tasks/*.txt` - Arquivos individuais de tarefas (auto-gerados do tasks.json)
+- `.env` - Chaves de API para uso da CLI
 
-### Claude Code Integration Files
+### Arquivos de Integração Claude Code
 
-- `CLAUDE.md` - Auto-loaded context for Claude Code (this file)
-- `.claude/settings.json` - Claude Code tool allowlist and preferences
-- `.claude/commands/` - Custom slash commands for repeated workflows
-- `.mcp.json` - MCP server configuration (project-specific)
+- `CLAUDE.md` - Contexto carregado automaticamente para Claude Code (este arquivo)
+- `.claude/settings.json` - Lista de ferramentas permitidas e preferências do Claude Code
+- `.claude/commands/` - Comandos de barra personalizados para fluxos de trabalho repetidos
+- `.mcp.json` - Configuração do servidor MCP (específica do projeto)
 
 ### Directory Structure
 
@@ -76,9 +76,9 @@ project/
 └── CLAUDE.md            # This file - auto-loaded by Claude Code
 ```
 
-## MCP Integration
+## Integração MCP
 
-Task Master provides an MCP server that Claude Code can connect to. Configure in `.mcp.json`:
+O Task Master fornece um servidor MCP ao qual o Claude Code pode se conectar. Configure no `.mcp.json`:
 
 ```json
 {
@@ -102,63 +102,63 @@ Task Master provides an MCP server that Claude Code can connect to. Configure in
 }
 ```
 
-### Essential MCP Tools
+### Ferramentas MCP Essenciais
 
 ```javascript
-help; // = shows available taskmaster commands
-// Project setup
+help; // = mostra comandos taskmaster disponíveis
+// Configuração do projeto
 initialize_project; // = task-master init
 parse_prd; // = task-master parse-prd
 
-// Daily workflow
+// Fluxo de trabalho diário
 get_tasks; // = task-master list
 next_task; // = task-master next
 get_task; // = task-master show <id>
 set_task_status; // = task-master set-status
 
-// Task management
+// Gerenciamento de tarefas
 add_task; // = task-master add-task
 expand_task; // = task-master expand
 update_task; // = task-master update-task
 update_subtask; // = task-master update-subtask
 update; // = task-master update
 
-// Analysis
+// Análise
 analyze_project_complexity; // = task-master analyze-complexity
 complexity_report; // = task-master complexity-report
 ```
 
-## Claude Code Workflow Integration
+## Integração do Fluxo de Trabalho Claude Code
 
-### Standard Development Workflow
+### Fluxo de Trabalho de Desenvolvimento Padrão
 
-#### 1. Project Initialization
+#### 1. Inicialização do Projeto
 
 ```bash
-# Initialize Task Master
+# Inicializar Task Master
 task-master init
 
-# Create or obtain PRD, then parse it
+# Criar ou obter PRD, depois analisá-lo
 task-master parse-prd .taskmaster/docs/prd.txt
 
-# Analyze complexity and expand tasks
+# Analisar complexidade e expandir tarefas
 task-master analyze-complexity --research
 task-master expand --all --research
 ```
 
-If tasks already exist, another PRD can be parsed (with new information only!) using parse-prd with --append flag. This will add the generated tasks to the existing list of tasks..
+Se as tarefas já existem, outro PRD pode ser analisado (apenas com novas informações!) usando parse-prd com a flag --append. Isso adicionará as tarefas geradas à lista existente de tarefas.
 
-#### 2. Daily Development Loop
+#### 2. Loop de Desenvolvimento Diário
 
 ```bash
-# Start each session
-task-master next                           # Find next available task
-task-master show <id>                     # Review task details
+# Começar cada sessão
+task-master next                           # Encontrar próxima tarefa disponível
+task-master show <id>                     # Revisar detalhes da tarefa
 
-# During implementation, check in code context into the tasks and subtasks
-task-master update-subtask --id=<id> --prompt="implementation notes..."
+# Durante a implementação, registrar contexto do código nas tarefas e subtarefas
+task-master update-subtask --id=<id> --prompt="notas de implementação..."
 
-# Complete tasks
+# Completar tarefas
 task-master set-status --id=<id> --status=done
 ```
 

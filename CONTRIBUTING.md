@@ -1,169 +1,169 @@
-# Contributing to ADHD Operating System
+# Contribuindo para o Sistema Operacional TDAH
 
-First off, thank you for considering contributing to ADHD-OS! It's people like you who make ADHD-OS such a great tool for the ADHD community.
+Antes de tudo, obrigado por considerar contribuir para o TDAH-OS! São pessoas como você que fazem do TDAH-OS uma ferramenta tão incrível para a comunidade TDAH.
 
-## 🤝 Code of Conduct
+## 🤝 Código de Conduta
 
-This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code. 
+Este projeto e todos que participam dele são regidos pelo nosso Código de Conduta. Ao participar, espera-se que você respeite este código. 
 
-### Our Standards
+### Nossos Padrões
 
-- **Be Kind**: We're all here to help each other
-- **Be Patient**: Remember that ADHD affects everyone differently
-- **Be Inclusive**: Welcome all neurotypes and backgrounds
-- **Be Understanding**: Not everyone has the same energy levels or availability
+- **Seja Gentil**: Estamos todos aqui para nos ajudar mutuamente
+- **Seja Paciente**: Lembre-se de que o TDAH afeta cada pessoa de forma diferente
+- **Seja Inclusivo**: Receba bem todos os neurótipos e origens
+- **Seja Compreensivo**: Nem todos têm os mesmos níveis de energia ou disponibilidade
 
-## 🎯 How Can I Contribute?
+## 🎯 Como Posso Contribuir?
 
-### Reporting Bugs
+### Relatando Bugs
 
-Before creating bug reports, please check existing issues as you might find out that you don't need to create one. When you are creating a bug report, please include as many details as possible:
+Antes de criar relatórios de bugs, verifique os issues existentes, pois você pode descobrir que não precisa criar um novo. Ao criar um relatório de bug, inclua o máximo de detalhes possível:
 
-- **Use a clear and descriptive title**
-- **Describe the exact steps to reproduce the problem**
-- **Provide specific examples**
-- **Describe the behavior you observed and expected**
-- **Include screenshots if possible**
-- **Include your environment details** (OS, Obsidian version, etc.)
+- **Use um título claro e descritivo**
+- **Descreva os passos exatos para reproduzir o problema**
+- **Forneça exemplos específicos**
+- **Descreva o comportamento observado e esperado**
+- **Inclua capturas de tela, se possível**
+- **Inclua detalhes do seu ambiente** (SO, versão do Obsidian, etc.)
 
-### Suggesting Enhancements
+### Sugerindo Melhorias
 
-Enhancement suggestions are tracked as GitHub issues. When creating an enhancement suggestion, please include:
+Sugestões de melhorias são rastreadas como issues do GitHub. Ao criar uma sugestão de melhoria, inclua:
 
-- **Use a clear and descriptive title**
-- **Provide a detailed description of the suggested enhancement**
-- **Explain why this enhancement would be useful to ADHD users**
-- **List any alternative solutions you've considered**
+- **Use um título claro e descritivo**
+- **Forneça uma descrição detalhada da melhoria sugerida**
+- **Explique por que esta melhoria seria útil para usuários com TDAH**
+- **Liste soluções alternativas que você considerou**
 
-### Your First Code Contribution
+### Sua Primeira Contribuição de Código
 
-Unsure where to begin? Look for these tags in our issues:
+Não sabe por onde começar? Procure por essas tags nos nossos issues:
 
-- `good first issue` - Simple issues perfect for beginners
-- `help wanted` - Issues where we need help
-- `quick win` - Small tasks that can be completed quickly (great for ADHD!)
+- `good first issue` - Issues simples perfeitos para iniciantes
+- `help wanted` - Issues onde precisamos de ajuda
+- `quick win` - Tarefas pequenas que podem ser completadas rapidamente (ótimo para TDAH!)
 
 ### Pull Requests
 
-1. Fork the repo and create your branch from `main`
-2. If you've added code, add tests
-3. If you've changed APIs, update documentation
-4. Ensure tests pass
-5. Make sure your code follows our style guide
-6. Issue that pull request!
+1. Faça fork do repositório e crie sua branch a partir da `main`
+2. Se você adicionou código, adicione testes
+3. Se você mudou APIs, atualize a documentação
+4. Garanta que os testes passem
+5. Certifique-se de que seu código segue nosso guia de estilo
+6. Envie esse pull request!
 
-## 📝 Development Process
+## 📝 Processo de Desenvolvimento
 
-### Setting Up Your Environment
+### Configurando Seu Ambiente
 
 ```bash
-# Clone your fork
-git clone https://github.com/your-username/adhd-operating-system.git
+# Clone seu fork
+git clone https://github.com/seu-usuario/adhd-operating-system.git
 cd adhd-operating-system
 
-# Add upstream remote
+# Adicione o remote upstream
 git remote add upstream https://github.com/original/adhd-operating-system.git
 
-# Install dependencies
+# Instale as dependências
 npm install
 
-# Run tests
+# Execute os testes
 npm test
 ```
 
-### Coding Style
+### Estilo de Código
 
-- Use meaningful variable names
-- Comment complex logic
-- Keep functions small and focused
-- Follow existing patterns in the codebase
+- Use nomes de variáveis significativos
+- Comente lógica complexa
+- Mantenha funções pequenas e focadas
+- Siga os padrões existentes na base de código
 
-### Commit Messages
+### Mensagens de Commit
 
-We follow conventional commits:
+Seguimos commits convencionais:
 
 ```
-feat: add pomodoro timer
-fix: correct time calculation in daily notes
-docs: update setup instructions
-style: format code with prettier
-test: add tests for habit tracking
+feat: adiciona timer pomodoro
+fix: corrige cálculo de tempo nas notas diárias
+docs: atualiza instruções de configuração
+style: formata código com prettier
+test: adiciona testes para rastreamento de hábitos
 ```
 
-### Testing
+### Testes
 
-- Write tests for new features
-- Ensure all tests pass before submitting PR
-- Include both unit and integration tests where appropriate
+- Escreva testes para novas funcionalidades
+- Garanta que todos os testes passem antes de enviar PR
+- Inclua testes unitários e de integração quando apropriado
 
-## 🧠 ADHD-Friendly Contributing Tips
+## 🧠 Dicas de Contribuição Amigáveis ao TDAH
 
-### Breaking Down Tasks
+### Dividindo Tarefas
 
-1. **Start Small**: Pick one tiny thing to fix
-2. **Use Timers**: Work in 25-minute chunks
-3. **Document as You Go**: Write notes while the context is fresh
-4. **Ask for Help**: We're here to support you!
+1. **Comece Pequeno**: Escolha uma coisa pequenina para corrigir
+2. **Use Cronômetros**: Trabalhe em blocos de 25 minutos
+3. **Documente Conforme Avança**: Escreva notas enquanto o contexto está fresco
+4. **Peça Ajuda**: Estamos aqui para apoiá-lo!
 
-### Managing Overwhelm
+### Gerenciando Sobrecarga
 
-- It's okay to submit incomplete PRs with [WIP] tag
-- Take breaks when needed
-- Focus on one issue at a time
-- Use our Discord for real-time help
+- Tudo bem enviar PRs incompletos com tag [WIP]
+- Faça pausas quando necessário
+- Foque em um issue por vez
+- Use nosso Discord para ajuda em tempo real
 
-### Time Management
+### Gerenciamento de Tempo
 
-- Set realistic deadlines for yourself
-- Communicate if you need more time
-- It's okay to abandon a PR if you lose interest
+- Defina prazos realistas para si mesmo
+- Comunique se precisar de mais tempo
+- Tudo bem abandonar um PR se perder o interesse
 
-## 📊 Task Master Integration
+## 📊 Integração Task Master
 
-We use Task Master to manage our development tasks:
+Usamos o Task Master para gerenciar nossas tarefas de desenvolvimento:
 
 ```bash
-# See available tasks
+# Veja as tarefas disponíveis
 task-master list
 
-# Pick up a community task
+# Pegue uma tarefa da comunidade
 task-master next --tag=community
 
-# Track your progress
+# Acompanhe seu progresso
 task-master set-status --id=<task-id> --status=in-progress
 ```
 
-## 🎉 Recognition
+## 🎉 Reconhecimento
 
-All contributors will be added to our [CONTRIBUTORS.md](CONTRIBUTORS.md) file and receive:
+Todos os contribuidores serão adicionados ao nosso arquivo [CONTRIBUTORS.md](CONTRIBUTORS.md) e receberão:
 
-- 🏆 Contributor badge on Discord
-- 📜 Certificate of contribution
-- 💝 Our eternal gratitude!
+- 🏆 Emblema de contribuidor no Discord
+- 📜 Certificado de contribuição
+- 💝 Nossa eterna gratidão!
 
-## 📞 Getting Help
+## 📞 Obtendo Ajuda
 
-- **Discord**: Join our [Discord server](https://discord.gg/adhd-os)
-- **Discussions**: Use [GitHub Discussions](https://github.com/yourusername/adhd-operating-system/discussions)
-- **Office Hours**: Weekly help sessions on Discord (Thursdays 7PM EST)
+- **Discord**: Junte-se ao nosso [servidor Discord](https://discord.gg/adhd-os)
+- **Discussões**: Use [GitHub Discussions](https://github.com/yourusername/adhd-operating-system/discussions)
+- **Horário de Atendimento**: Sessões semanais de ajuda no Discord (Quintas-feiras 19h EST)
 
-## 🔄 Release Process
+## 🔄 Processo de Release
 
-1. Features are developed in feature branches
-2. PRs are reviewed by at least one maintainer
-3. Approved PRs are merged to `develop`
-4. Weekly releases from `develop` to `main`
-5. Hotfixes go directly to `main` with backport to `develop`
+1. Funcionalidades são desenvolvidas em feature branches
+2. PRs são revisados por pelo menos um mantenedor
+3. PRs aprovados são mesclados na `develop`
+4. Releases semanais da `develop` para a `main`
+5. Hotfixes vão diretamente para a `main` com backport para a `develop`
 
-## 📚 Additional Resources
+## 📚 Recursos Adicionais
 
-- [Project Roadmap](https://github.com/yourusername/adhd-operating-system/projects/1)
-- [Architecture Docs](docs/ARCHITECTURE.md)
-- [API Documentation](docs/API.md)
-- [Testing Guide](docs/TESTING.md)
+- [Roteiro do Projeto](https://github.com/yourusername/adhd-operating-system/projects/1)
+- [Documentação de Arquitetura](docs/ARCHITECTURE.md)
+- [Documentação da API](docs/API.md)
+- [Guia de Testes](docs/TESTING.md)
 
 ---
 
-Remember: **Your contributions matter, no matter how small!** Every bug fix, feature, or even typo correction helps make ADHD-OS better for everyone.
+Lembre-se: **Suas contribuições importam, não importa quão pequenas!** Cada correção de bug, funcionalidade ou até mesmo correção de erro de digitação ajuda a tornar o TDAH-OS melhor para todos.
 
-Thank you for being part of our community! 💜
+Obrigado por fazer parte da nossa comunidade! 💜

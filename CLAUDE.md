@@ -1,52 +1,52 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Este arquivo fornece orientações para o Claude Code (claude.ai/code) ao trabalhar com código neste repositório.
 
-## Project Overview
+## Visão Geral do Projeto
 
-This is the "adhd-operating-system" project - appears to be in initial setup phase.
+Este é o projeto "adhd-operating-system" - parece estar na fase inicial de configuração.
 
-## Development Commands
+## Comandos de Desenvolvimento
 
-*To be updated as the project structure is established*
+*A ser atualizado conforme a estrutura do projeto for estabelecida*
 
-### Build Commands
-- TBD based on chosen tech stack
+### Comandos de Build
+- TBD baseado na stack tecnológica escolhida
 
-### Test Commands  
-- TBD based on testing framework
+### Comandos de Teste  
+- TBD baseado no framework de testes
 
-### Run Commands
-- TBD based on project type
+### Comandos de Execução
+- TBD baseado no tipo de projeto
 
-## Architecture Notes
+## Notas de Arquitetura
 
-*To be documented as the project architecture emerges*
+*A ser documentado conforme a arquitetura do projeto emergir*
 
-## Project Structure
+## Estrutura do Projeto
 
-Currently an empty repository. Expected structure will depend on:
-- Chosen programming language(s)
-- Framework selection
-- Whether this is a web app, CLI tool, library, etc.
+Atualmente um repositório vazio. A estrutura esperada dependerá de:
+- Linguagem(ns) de programação escolhida(s)
+- Seleção de framework
+- Se é uma aplicação web, ferramenta CLI, biblioteca, etc.
 
-## Key Considerations
+## Considerações Principais
 
-Given the project name "adhd-operating-system", consider:
-- Focus on user experience that accommodates ADHD needs
-- Clear, distraction-free interfaces
-- Task management and focus features
-- Time awareness and scheduling capabilities
-- Notification management
+Dado o nome do projeto "adhd-operating-system", considere:
+- Foco na experiência do usuário que acomoda necessidades do TDAH
+- Interfaces claras e livres de distrações
+- Recursos de gerenciamento de tarefas e foco
+- Consciência temporal e capacidades de agendamento
+- Gerenciamento de notificações
 
-## Next Steps
+## Próximos Passos
 
-When developing this project:
-1. Define the project type (web app, desktop app, CLI, etc.)
-2. Choose appropriate technology stack
-3. Set up basic project structure
-4. Update this CLAUDE.md with specific commands and architecture details
+Ao desenvolver este projeto:
+1. Definir o tipo de projeto (aplicação web, aplicação desktop, CLI, etc.)
+2. Escolher stack tecnológica apropriada
+3. Configurar estrutura básica do projeto
+4. Atualizar este CLAUDE.md com comandos específicos e detalhes de arquitetura
 
-## Task Master AI Instructions
-**Import Task Master's development workflow commands and guidelines, treat as if import is in the main CLAUDE.md file.**
+## Instruções do Task Master AI
+**Importar comandos e diretrizes do fluxo de trabalho de desenvolvimento do Task Master, tratar como se a importação estivesse no arquivo CLAUDE.md principal.**
 @./.taskmaster/CLAUDE.md

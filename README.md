@@ -1,153 +1,153 @@
-# 🧠 ADHD Operating System
+# 🧠 Sistema Operacional TDAH
 
-> A comprehensive digital productivity platform designed specifically for the ADHD brain - turning chaos into clarity, one task at a time.
+> Uma plataforma digital abrangente de produtividade projetada especificamente para o cérebro com TDAH - transformando o caos em clareza, uma tarefa de cada vez.
 
 [![Task Master](https://img.shields.io/badge/Powered%20by-Task%20Master%20AI-blue?style=for-the-badge)](https://github.com/yourusername/task-master-ai)
 [![Obsidian](https://img.shields.io/badge/Built%20on-Obsidian-7C3AED?style=for-the-badge&logo=obsidian&logoColor=white)](https://obsidian.md)
 [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
 
-## 🚀 What is ADHD-OS?
+## 🚀 O que é o TDAH-OS?
 
-ADHD-OS is not just another productivity tool - it's a complete operating system for your life, designed from the ground up to work *with* your ADHD brain, not against it. 
+O TDAH-OS não é apenas mais uma ferramenta de produtividade - é um sistema operacional completo para sua vida, projetado desde o início para trabalhar *com* seu cérebro TDAH, não contra ele. 
 
-### 🎯 Key Features
+### 🎯 Recursos Principais
 
-- **🧠 Life-OS Integration** - Complete life management system built on Obsidian
-- **🤖 AI-Powered Task Management** - Intelligent task breakdown and prioritization
-- **⏱️ Time Awareness Tools** - Combat time blindness with visual aids
-- **🎯 Focus Enhancement** - ADHD-optimized Pomodoro and distraction management
-- **💾 Memory Augmentation** - External brain system for perfect recall
-- **🎮 Gamification** - Dopamine-driven rewards and achievements
-- **🚫 Overwhelm Prevention** - Smart filtering and progressive disclosure
-- **📱 Mobile Support** - Quick capture anywhere, anytime
+- **🧠 Integração Life-OS** - Sistema completo de gerenciamento de vida baseado no Obsidian
+- **🤖 Gerenciamento de Tarefas com IA** - Divisão inteligente de tarefas e priorização
+- **⏱️ Ferramentas de Consciência Temporal** - Combate a cegueira temporal com auxílios visuais
+- **🎯 Melhoria do Foco** - Pomodoro otimizado para TDAH e gerenciamento de distrações
+- **💾 Ampliação da Memória** - Sistema de cérebro externo para lembrança perfeita
+- **🎮 Gamificação** - Recompensas e conquistas movidas por dopamina
+- **🚫 Prevenção de Sobrecarga** - Filtragem inteligente e divulgação progressiva
+- **📱 Suporte Mobile** - Captura rápida em qualquer lugar, a qualquer hora
 
-## 🏃‍♂️ Quick Start
+## 🏃‍♂️ Início Rápido
 
-### Prerequisites
+### Pré-requisitos
 
 - [Obsidian](https://obsidian.md) (v1.0+)
 - [Node.js](https://nodejs.org) (v18+)
 - [Git](https://git-scm.com)
 
-### Installation
+### Instalação
 
 ```bash
-# Clone the repository
+# Clone o repositório
 git clone https://github.com/yourusername/adhd-operating-system.git
 cd adhd-operating-system
 
-# Install dependencies
+# Instale as dependências
 npm install
 
-# Initialize Task Master
+# Inicialize o Task Master
 task-master init
 
-# Open in Obsidian
-# File -> Open Vault -> Select the adhd-operating-system folder
+# Abra no Obsidian
+# Arquivo -> Abrir Cofre -> Selecione a pasta adhd-operating-system
 ```
 
-### First Time Setup
+### Configuração Inicial
 
-1. **Configure AI Models** (optional but recommended)
+1. **Configure os Modelos de IA** (opcional mas recomendado)
    ```bash
    task-master models --setup
    ```
 
-2. **Create Your First Daily Note**
-   - Press `Ctrl/Cmd + P` to open command palette
-   - Type "Daily Note" and select "Create today's daily note"
-   - Start with the morning brain dump!
+2. **Crie sua Primeira Nota Diária**
+   - Pressione `Ctrl/Cmd + P` para abrir a paleta de comandos
+   - Digite "Daily Note" e selecione "Create today's daily note"
+   - Comece com o despejo cerebral matinal!
 
-3. **Process the Inbox**
-   - Everything goes in the inbox first
-   - Process daily to maintain clarity
+3. **Processe a Caixa de Entrada**
+   - Tudo vai primeiro para a caixa de entrada
+   - Processe diariamente para manter a clareza
 
-## 📖 Documentation
+## 📖 Documentação
 
-### Core Concepts
+### Conceitos Fundamentais
 
-#### 🧠 The Life-OS Structure
+#### 🧠 A Estrutura Life-OS
 
 ```
 🧠 Life-OS/
-├── 📥 Inbox/          # Capture everything here first
-├── 📅 Daily/          # Daily notes and planning
-├── 🎯 Tasks/          # Task management hub
-│   ├── Active/        # What you're working on now
-│   ├── Backlog/       # Future tasks
-│   └── Completed/     # Celebrate wins!
-├── 📊 Dashboard/      # Analytics and insights
-├── 🏃 Habits/         # Track and build routines
-└── 💰 Finance/        # ADHD-friendly money management
+├── 📥 Inbox/          # Capture tudo aqui primeiro
+├── 📅 Daily/          # Notas diárias e planejamento
+├── 🎯 Tasks/          # Centro de gerenciamento de tarefas
+│   ├── Active/        # O que você está fazendo agora
+│   ├── Backlog/       # Tarefas futuras
+│   └── Completed/     # Celebre as vitórias!
+├── 📊 Dashboard/      # Análises e insights
+├── 🏃 Habits/         # Acompanhe e construa rotinas
+└── 💰 Finance/        # Gestão financeira amigável ao TDAH
 ```
 
-#### 🚀 Daily Workflow
+#### 🚀 Fluxo de Trabalho Diário
 
-1. **Morning (5 min)**
-   - Open daily note
-   - Brain dump everything on your mind
-   - Review yesterday's incomplete tasks
-   - Set today's Big 3 priorities
+1. **Manhã (5 min)**
+   - Abra a nota diária
+   - Despeje tudo que está em sua mente
+   - Revise as tarefas incompletas de ontem
+   - Defina as 3 prioridades principais de hoje
 
-2. **Throughout the Day**
-   - Quick capture to inbox
-   - Use Pomodoro timer for focus
-   - Check time awareness indicators
-   - Celebrate completed tasks!
+2. **Durante o Dia**
+   - Captura rápida para a caixa de entrada
+   - Use o timer Pomodoro para foco
+   - Verifique os indicadores de consciência temporal
+   - Celebre as tarefas concluídas!
 
-3. **Evening (5 min)**
-   - Process inbox items
-   - Review accomplishments
-   - Plan tomorrow's Big 3
+3. **Noite (5 min)**
+   - Processe os itens da caixa de entrada
+   - Revise as conquistas
+   - Planeje as 3 principais de amanhã
 
-### 🛠️ Advanced Features
+### 🛠️ Recursos Avançados
 
-#### AI Task Breakdown
+#### Divisão de Tarefas com IA
 ```bash
-# Let AI break down complex tasks
+# Deixe a IA dividir tarefas complexas
 task-master expand --id=1 --research
 
-# Get next task based on energy and dependencies
+# Obtenha a próxima tarefa baseada em energia e dependências
 task-master next
 ```
 
-#### Focus Sessions
-- Customizable Pomodoro intervals (start with 15 min)
-- Hyperfocus detection and alerts
-- Distraction log for wandering thoughts
-- Movement reminders during breaks
+#### Sessões de Foco
+- Intervalos Pomodoro personalizáveis (comece com 15 min)
+- Detecção e alertas de hiperfoco
+- Log de distrações para pensamentos divagantes
+- Lembretes de movimento durante pausas
 
-#### Memory System
-- Session checkpoints preserve context
-- Smart search finds anything instantly
-- Visual knowledge graphs show connections
-- Never lose an idea again
+#### Sistema de Memória
+- Checkpoints de sessão preservam contexto
+- Busca inteligente encontra qualquer coisa instantaneamente
+- Gráficos visuais de conhecimento mostram conexões
+- Nunca mais perca uma ideia
 
-## 🎮 Gamification & Rewards
+## 🎮 Gamificação e Recompensas
 
-- 🏆 **Achievements** - Unlock badges for consistency
-- 🔥 **Streaks** - Visual progress tracking
-- 🎯 **Quick Wins** - Dopamine hits from small tasks
-- 📈 **Progress Charts** - See your growth over time
+- 🏆 **Conquistas** - Desbloqueie emblemas por consistência
+- 🔥 **Sequências** - Acompanhamento visual do progresso
+- 🎯 **Vitórias Rápidas** - Hits de dopamina de tarefas pequenas
+- 📈 **Gráficos de Progresso** - Veja seu crescimento ao longo do tempo
 
-## 🤝 Contributing
+## 🤝 Contribuindo
 
-We welcome contributions! ADHD-OS is built by and for the ADHD community.
+Damos boas-vindas às contribuições! O TDAH-OS é construído pela e para a comunidade TDAH.
 
-### How to Contribute
+### Como Contribuir
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Faça um fork do repositório
+2. Crie sua branch de feature (`git checkout -b feature/funcionalidade-incrivel`)
+3. Faça commit das suas mudanças (`git commit -m 'Adiciona funcionalidade incrível'`)
+4. Faça push para a branch (`git push origin feature/funcionalidade-incrivel`)
+5. Abra um Pull Request
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+Veja [CONTRIBUTING.md](CONTRIBUTING.md) para diretrizes detalhadas.
 
-## 📊 Task Progress
+## 📊 Progresso das Tarefas
 
-This project is managed using Task Master.
+Este projeto é gerenciado usando o Task Master.
 
 
 <!-- TASKMASTER_EXPORT_START -->
@@ -196,110 +196,110 @@ This project is managed using Task Master.
 > 📋 **End of Taskmaster Export** - Tasks are synced from your project using the `sync-readme` command.
 <!-- TASKMASTER_EXPORT_END -->
 
-## 🧰 Tech Stack
+## 🧰 Stack Tecnológico
 
-- **Frontend**: Obsidian + Custom Plugins
+- **Frontend**: Obsidian + Plugins Personalizados
 - **Backend**: Node.js + Express
-- **AI**: Claude API (Anthropic)
-- **Task Management**: Task Master AI
-- **Database**: Local SQLite + Optional Cloud Sync
+- **IA**: Claude API (Anthropic)
+- **Gerenciamento de Tarefas**: Task Master AI
+- **Banco de Dados**: SQLite Local + Sincronização na Nuvem Opcional
 - **Mobile**: Progressive Web App (PWA)
 
-## 🔒 Privacy & Security
+## 🔒 Privacidade e Segurança
 
-- **Local First**: Your data stays on your device by default
-- **E2E Encryption**: Optional cloud sync is fully encrypted
-- **No Tracking**: Zero analytics or user tracking
-- **Open Source**: Complete transparency in code
+- **Local Primeiro**: Seus dados ficam no seu dispositivo por padrão
+- **Criptografia E2E**: Sincronização na nuvem opcional é totalmente criptografada
+- **Sem Rastreamento**: Zero análises ou rastreamento de usuário
+- **Código Aberto**: Transparência completa no código
 
-## 📱 Platform Support
+## 📱 Suporte a Plataformas
 
 - ✅ **Windows** (10/11)
 - ✅ **macOS** (11+)
 - ✅ **Linux** (Ubuntu 20.04+)
 - ✅ **iOS** (via Obsidian Mobile)
 - ✅ **Android** (via Obsidian Mobile)
-- 🚧 **Web** (PWA - Coming Soon)
+- 🚧 **Web** (PWA - Em Breve)
 
-## 🎯 Roadmap
+## 🎯 Roteiro
 
-### Phase 1: Foundation (Current)
-- [x] Project setup and infrastructure
-- [ ] Core Obsidian vault structure
-- [ ] Basic task management
-- [ ] Daily note system
+### Fase 1: Fundação (Atual)
+- [x] Configuração do projeto e infraestrutura
+- [ ] Estrutura central do cofre Obsidian
+- [ ] Gerenciamento básico de tarefas
+- [ ] Sistema de notas diárias
 
-### Phase 2: Intelligence
-- [ ] AI-powered task breakdown
-- [ ] Smart prioritization
-- [ ] Context preservation
-- [ ] Time estimation learning
+### Fase 2: Inteligência
+- [ ] Divisão de tarefas alimentada por IA
+- [ ] Priorização inteligente
+- [ ] Preservação de contexto
+- [ ] Aprendizado de estimativa de tempo
 
-### Phase 3: Enhancement
-- [ ] Focus tools and timers
-- [ ] Gamification system
-- [ ] Advanced analytics
-- [ ] Mobile PWA
+### Fase 3: Aprimoramento
+- [ ] Ferramentas de foco e cronômetros
+- [ ] Sistema de gamificação
+- [ ] Análises avançadas
+- [ ] PWA móvel
 
-### Phase 4: Integration
-- [ ] Voice commands
-- [ ] Calendar sync
-- [ ] Third-party apps
-- [ ] Wearable support
+### Fase 4: Integração
+- [ ] Comandos de voz
+- [ ] Sincronização de calendário
+- [ ] Aplicativos de terceiros
+- [ ] Suporte a dispositivos vestíveis
 
-## 🤔 FAQ
+## 🤔 Perguntas Frequentes
 
 <details>
-<summary><b>Why another productivity app?</b></summary>
+<summary><b>Por que mais um aplicativo de produtividade?</b></summary>
 
-ADHD-OS isn't just another app - it's designed specifically for how ADHD brains work. Every feature addresses a specific ADHD challenge, from time blindness to executive dysfunction.
+O TDAH-OS não é apenas mais um aplicativo - ele é projetado especificamente para como cérebros com TDAH funcionam. Cada recurso aborda um desafio específico do TDAH, desde a cegueira temporal até a disfunção executiva.
 </details>
 
 <details>
-<summary><b>Do I need coding knowledge?</b></summary>
+<summary><b>Preciso ter conhecimento de programação?</b></summary>
 
-No! While ADHD-OS is open source, it's designed for non-technical users. Just download Obsidian and follow our setup guide.
+Não! Embora o TDAH-OS seja código aberto, ele é projetado para usuários não técnicos. Apenas baixe o Obsidian e siga nosso guia de configuração.
 </details>
 
 <details>
-<summary><b>Is it really free?</b></summary>
+<summary><b>É realmente grátis?</b></summary>
 
-Yes! ADHD-OS is open source and free forever. Optional cloud sync and AI features may require API keys, but the core system is 100% free.
+Sim! O TDAH-OS é código aberto e gratuito para sempre. Sincronização na nuvem opcional e recursos de IA podem exigir chaves de API, mas o sistema central é 100% gratuito.
 </details>
 
 <details>
-<summary><b>Can I use my existing Obsidian vault?</b></summary>
+<summary><b>Posso usar meu cofre Obsidian existente?</b></summary>
 
-Yes! ADHD-OS can be integrated into existing vaults. We recommend backing up first and following our migration guide.
+Sim! O TDAH-OS pode ser integrado aos cofres existentes. Recomendamos fazer backup primeiro e seguir nosso guia de migração.
 </details>
 
-## 💬 Community & Support
+## 💬 Comunidade e Suporte
 
-- 🌟 [GitHub Discussions](https://github.com/yourusername/adhd-operating-system/discussions) - Questions and ideas
-- 🐛 [Issue Tracker](https://github.com/yourusername/adhd-operating-system/issues) - Bug reports
-- 💬 [Discord Server](https://discord.gg/adhd-os) - Real-time chat
-- 📧 [Newsletter](https://adhd-os.com/newsletter) - Monthly updates
-- 🐦 [Twitter](https://twitter.com/adhd_os) - Quick updates
+- 🌟 [GitHub Discussions](https://github.com/yourusername/adhd-operating-system/discussions) - Perguntas e ideias
+- 🐛 [Rastreador de Issues](https://github.com/yourusername/adhd-operating-system/issues) - Relatórios de bugs
+- 💬 [Servidor Discord](https://discord.gg/adhd-os) - Chat em tempo real
+- 📧 [Newsletter](https://adhd-os.com/newsletter) - Atualizações mensais
+- 🐦 [Twitter](https://twitter.com/adhd_os) - Atualizações rápidas
 
-## 📄 License
+## 📄 Licença
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-## 🙏 Acknowledgments
+## 🙏 Agradecimentos
 
-- The Obsidian community for an amazing platform
-- Task Master AI for intelligent task management
-- Every ADHD brain that shared their struggles and strategies
-- You, for being part of this journey
+- A comunidade Obsidian por uma plataforma incrível
+- Task Master AI pelo gerenciamento inteligente de tarefas
+- Cada cérebro com TDAH que compartilhou suas lutas e estratégias
+- Você, por fazer parte desta jornada
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by and for the ADHD Community**
+**Construído com ❤️ pela e para a Comunidade TDAH**
 
-*Remember: You're not broken, you just need a different operating system.*
+*Lembre-se: Você não está quebrado, apenas precisa de um sistema operacional diferente.*
 
-[Website](https://adhd-os.com) • [Documentation](https://docs.adhd-os.com) • [Blog](https://blog.adhd-os.com)
+[Website](https://adhd-os.com) • [Documentação](https://docs.adhd-os.com) • [Blog](https://blog.adhd-os.com)
 
 </div>
