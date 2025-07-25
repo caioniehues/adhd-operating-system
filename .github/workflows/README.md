@@ -43,13 +43,14 @@ This directory contains GitHub Actions workflows that integrate Claude AI to hel
 
 ### Prerequisites
 1. Admin access to the repository
-2. Anthropic API key
+2. Claude Code OAuth token
 
 ### Quick Setup
 1. Install the Claude GitHub app: https://github.com/apps/claude
-2. Add your Anthropic API key as a repository secret:
+2. Add your Claude Code OAuth token as a repository secret:
    - Go to Settings → Secrets and variables → Actions
-   - Add new secret: `ANTHROPIC_API_KEY`
+   - Add new secret: `CLAUDE_CODE_OAUTH_TOKEN`
+   - Value: `OBUu5yKaV5c6zNo8qq42GkAIKt7Sw0G3eYbRBWzfdM5ZPKiB#VkM8BnT5spS_jU51btXrE7KDeOu-3_A8wP67s0fZP0w`
 3. The workflows are ready to use!
 
 ### Testing the Setup
@@ -82,17 +83,18 @@ Use the manual workflow dispatch to generate:
 - ADHD usage tips
 
 ## Security Notes
-- Never commit API keys directly
+- Never commit OAuth tokens directly
 - All secrets should use GitHub Secrets
 - Review Claude's suggestions before merging
 - The workflows have appropriate permission scoping
+- The OAuth token should be kept confidential
 
 ## Troubleshooting
 
 ### Claude Not Responding
 1. Check that `@claude` (not `/claude`) is used
 2. Verify the GitHub app is installed
-3. Confirm API key is set in secrets
+3. Confirm OAuth token is set in secrets
 4. Check Actions tab for workflow runs
 
 ### Review Comments Not Appearing
@@ -110,12 +112,12 @@ Use the manual workflow dispatch to generate:
 - Each Claude interaction uses API tokens
 - Workflows have timeout limits to prevent runaway costs
 - Use specific, focused requests to minimize token usage
-- Monitor your Anthropic API usage dashboard
+- Monitor your Claude Code usage dashboard
 
 ## Support
 For issues with the workflows, check:
 1. GitHub Actions logs
-2. Anthropic API status
+2. Claude Code API status
 3. Repository settings and permissions
 
 Remember: These workflows are designed to help create an ADHD-friendly plugin. Always keep the end user's needs in mind!
