@@ -1,11 +1,31 @@
 # Task ID: 16
-# Title: Build knowledge graph visualization
+# Title: Create progressive web app for mobile
 # Status: pending
-# Dependencies: 6 (Not found)
-# Priority: low
-# Description: Create interactive knowledge graph for discovering connections between notes
+# Dependencies: 5, 6
+# Priority: medium
+# Description: Build PWA companion app for mobile quick capture, task management, and on-the-go ADHD support
 # Details:
-Implement force-directed graph visualization of note connections, cluster identification for related topics, and interactive exploration. Include search highlighting and connection strength indicators.
+1. Set up PWA infrastructure:
+   - Service worker implementation
+   - Offline capability
+   - App manifest
+   - Install prompts
+2. Build mobile features:
+   - Quick capture interface
+   - Voice input support
+   - Photo capture for tasks
+   - Location-based reminders
+   - Push notifications
+3. Optimize for mobile:
+   - Touch-friendly UI
+   - Reduced data usage
+   - Battery optimization
+   - Fast loading
+4. Implement sync:
+   - Real-time sync with desktop
+   - Conflict resolution
+   - Offline queue
+5. Add mobile-specific features
 
 # Test Strategy:
-Test graph rendering performance with 1000+ notes, interaction responsiveness, and cluster detection accuracy.
+Test offline functionality. Verify sync reliability. Test on various devices. Validate battery usage.

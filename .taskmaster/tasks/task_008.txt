@@ -1,11 +1,26 @@
 # Task ID: 8
-# Title: Create habit tracking system
+# Title: Build time awareness visualization tools
 # Status: pending
-# Dependencies: 2 (Not found)
-# Priority: medium
-# Description: Develop visual habit tracking with streak management and reward mechanisms
+# Dependencies: 4
+# Priority: high
+# Description: Create visual time management tools to combat ADHD time blindness with analog representations and gentle notifications
 # Details:
-Build habit templates with visual progress indicators, streak tracking, flexible scheduling (daily/weekly/custom), and celebration animations. Include habit stacking suggestions and energy-based scheduling.
+1. Implement visual time representations:
+   - Analog clock visualizations for tasks
+   - Time block visual indicators
+   - Progress bars with time remaining
+   - Calendar heat maps
+2. Build time tracking features:
+   - Automatic time tracking
+   - Time estimation learning
+   - Actual vs estimated comparisons
+   - Buffer time auto-calculation
+3. Create notification system:
+   - Gentle "time's up" alerts
+   - Meeting approach warnings
+   - Customizable notification styles
+4. Add historical time analytics
+5. Implement time zone support
 
 # Test Strategy:
-Test habit creation, streak calculation, missed day handling, and reward trigger mechanisms.
+Test time visualization accuracy. Verify notification timing. Test estimation learning algorithm. Validate timezone handling.

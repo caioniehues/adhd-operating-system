@@ -1,11 +1,23 @@
 # Task ID: 6
-# Title: Implement memory augmentation features
+# Title: Create frictionless inbox capture system
 # Status: pending
-# Dependencies: 1 (Not found), 3 (Not found)
-# Priority: medium
-# Description: Create the external memory system with session documentation and context preservation
+# Dependencies: 3
+# Priority: high
+# Description: Implement zero-friction capture system for thoughts, tasks, and ideas with intelligent categorization and processing workflows
 # Details:
-Build session checkpoint system that captures: current task context, decisions made, next steps, and mental state. Implement smart search across all notes, visual knowledge graphs, and automatic linking of related content.
+1. Build quick capture interface:
+   - Global hotkey activation
+   - Minimal required fields
+   - Auto-timestamp and context
+   - Voice-to-text support
+   - Image/screenshot capture
+2. Implement intelligent categorization
+3. Create daily inbox processing workflow
+4. Add batch operations for sorting
+5. Build mobile-optimized capture
+6. Implement Obsidian URI scheme support
+7. Create inbox zero celebration
+8. Add capture analytics
 
 # Test Strategy:
-Test checkpoint creation and restoration, search accuracy across large note sets, and knowledge graph visualization.
+Test capture speed (<2 seconds). Verify categorization accuracy. Test voice input. Validate mobile capture.

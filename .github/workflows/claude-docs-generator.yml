@@ -1,0 +1,86 @@
+name: Claude Documentation Generator
+
+on:
+  workflow_dispatch:
+    inputs:
+      doc_type:
+        description: 'Type of documentation to generate'
+        required: true
+        type: choice
+        options:
+          - user-guide
+          - api-reference
+          - developer-guide
+          - adhd-tips
+          - all
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**/*.ts'
+      - 'README.md'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate Documentation with Claude
+        uses: anthropics/claude-code-action@main
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          timeout_minutes: "15"
+          max_turns: "10"
+          
+          # Documentation generation prompt
+          direct_prompt: |
+            Generate or update documentation for the ADHD-OS Obsidian plugin.
+            
+            Documentation type: ${{ github.event.inputs.doc_type || 'api-reference' }}
+            
+            For user-guide:
+            - Create clear, simple instructions
+            - Use screenshots/diagrams where helpful
+            - Include ADHD-friendly tips
+            - Organize with clear headings
+            - Add quick-start section
+            
+            For api-reference:
+            - Document all public APIs
+            - Include TypeScript types
+            - Provide usage examples
+            - Explain parameters clearly
+            
+            For developer-guide:
+            - Setup instructions
+            - Architecture overview
+            - Contributing guidelines
+            - Testing approaches
+            - Plugin development tips
+            
+            For adhd-tips:
+            - Best practices for ADHD users
+            - Feature usage strategies
+            - Customization recommendations
+            - Troubleshooting common issues
+            
+            Documentation should be:
+            - Clear and concise
+            - Well-organized
+            - Accessible (WCAG AA)
+            - Encouraging tone
+            - Include practical examples
+            
+            Create a PR with the documentation updates in the docs/ directory.
+            Use Markdown format with proper frontmatter for Obsidian.

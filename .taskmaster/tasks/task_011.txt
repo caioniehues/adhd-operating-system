@@ -1,11 +1,27 @@
 # Task ID: 11
-# Title: Create motivation and reward system
+# Title: Create habit tracking system
 # Status: pending
-# Dependencies: 3 (Not found), 8 (Not found), 9 (Not found)
+# Dependencies: 4
 # Priority: medium
-# Description: Build gamification elements and achievement tracking for dopamine regulation
+# Description: Develop visual habit tracking with ADHD-friendly features including flexible streaks, visual rewards, and forgiving mechanics
 # Details:
-Implement achievement system with unlockable rewards, task completion animations, streak celebrations, and progress milestones. Include customizable reward preferences and optional social sharing features.
+1. Build habit tracking core:
+   - Visual habit chains
+   - Flexible scheduling (not just daily)
+   - Multiple completion states
+   - Partial credit system
+2. Implement ADHD-friendly features:
+   - Streak forgiveness (1-2 missed days)
+   - Visual progress indicators
+   - Celebration animations
+   - Habit stacking suggestions
+3. Create habit templates:
+   - Morning routines
+   - Medication reminders
+   - Self-care habits
+   - Focus rituals
+4. Add habit analytics
+5. Build habit sharing (optional)
 
 # Test Strategy:
-Test achievement triggers, reward unlocking logic, animation performance, and user engagement metrics.
+Test habit creation and tracking. Verify streak calculations. Test forgiveness mechanics. Validate visual feedback.

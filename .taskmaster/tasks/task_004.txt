@@ -1,11 +1,23 @@
 # Task ID: 4
-# Title: Create inbox quick capture system
+# Title: Build ADHD-optimized daily note system
 # Status: pending
-# Dependencies: 1 (Not found)
+# Dependencies: 3
 # Priority: high
-# Description: Implement a frictionless inbox system for capturing thoughts, tasks, and ideas without context switching
+# Description: Create daily note templates with ADHD-specific features including brain dump, time blocking, energy tracking, and overwhelm prevention
 # Details:
-Build inbox templates with minimal required fields, automatic timestamping, and intelligent categorization. Include voice-to-text support, image capture, and quick sorting mechanisms. Implement daily inbox processing workflows.
+1. Design daily note template structure:
+   - Morning brain dump section (unlimited capture)
+   - Visual time blocks with drag-and-drop
+   - Energy level indicator (1-5 scale)
+   - Quick task capture area
+   - "3 Must Do" focus section
+   - Celebration/wins tracker
+   - Evening reflection prompts
+2. Implement auto-population from previous day
+3. Create crisis mode toggle
+4. Add visual progress indicators
+5. Implement mobile-responsive design
+6. Build template customization options
 
 # Test Strategy:
-Test capture speed (must be under 5 seconds), categorization accuracy, and daily processing workflow efficiency.
+Test daily note creation for 7 consecutive days. Verify task migration. Test crisis mode activation. Validate mobile layout.

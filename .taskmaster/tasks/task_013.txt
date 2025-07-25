@@ -1,11 +1,31 @@
 # Task ID: 13
-# Title: Develop Obsidian plugin architecture
+# Title: Implement comprehensive analytics dashboard
 # Status: pending
-# Dependencies: 1 (Not found)
-# Priority: high
-# Description: Create the core Obsidian plugin framework for all ADHD-OS features
+# Dependencies: 4, 5, 11
+# Priority: medium
+# Description: Create visual analytics dashboards for daily, weekly, and monthly progress tracking with ADHD-specific insights
 # Details:
-Build modular plugin architecture supporting: hot-reload for development, settings management, command palette integration, and inter-plugin communication. Ensure compatibility with popular Obsidian plugins.
+1. Build daily dashboard:
+   - Task completion rate
+   - Time awareness accuracy
+   - Energy patterns
+   - Focus session summary
+   - Quick wins achieved
+2. Create weekly analytics:
+   - Productivity trends
+   - Habit consistency
+   - Time estimation improvement
+   - Overwhelm frequency
+3. Implement monthly insights:
+   - Pattern identification
+   - Goal achievement
+   - Growth metrics
+   - Recommendations
+4. Add visual representations:
+   - Charts and graphs
+   - Heat maps
+   - Progress rings
+5. Export capabilities
 
 # Test Strategy:
-Test plugin loading, settings persistence, command registration, and compatibility with top 10 Obsidian plugins.
+Test data aggregation accuracy. Verify visualization rendering. Test export formats. Validate insight generation.

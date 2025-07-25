@@ -1,11 +1,31 @@
 # Task ID: 18
-# Title: Implement voice integration
+# Title: Create onboarding experience
 # Status: pending
-# Dependencies: 4 (Not found), 10 (Not found)
-# Priority: low
-# Description: Add voice input capabilities for hands-free capture and command execution
+# Dependencies: 3, 4, 5, 6
+# Priority: medium
+# Description: Build progressive onboarding system that introduces ADHD-OS features gradually without overwhelming new users
 # Details:
-Integrate speech-to-text for quick capture, voice commands for common actions, and audio note transcription. Support multiple languages and accents.
+1. Design onboarding flow:
+   - ADHD type assessment
+   - Personal preference quiz
+   - Initial setup wizard
+   - Feature introduction
+   - Success celebration
+2. Implement progressive disclosure:
+   - Start with 3 core features
+   - Unlock features gradually
+   - Achievement-based progression
+   - Skip options for experienced users
+3. Create onboarding content:
+   - Interactive tutorials
+   - Video walkthroughs
+   - Sample data generation
+   - Quick win tasks
+4. Build help system:
+   - Contextual help tooltips
+   - Searchable documentation
+   - Community forum links
+5. First-week engagement plan
 
 # Test Strategy:
-Test recognition accuracy in various noise conditions, command execution reliability, and transcription quality.
+Test with new users. Measure completion rates. Test skip functionality. Validate help system.

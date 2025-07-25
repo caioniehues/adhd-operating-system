@@ -1,11 +1,24 @@
 # Task ID: 7
-# Title: Build time awareness visualizations
+# Title: Implement working memory augmentation
 # Status: pending
-# Dependencies: 2 (Not found)
-# Priority: medium
-# Description: Create visual time management tools to combat time blindness
+# Dependencies: 3, 5
+# Priority: high
+# Description: Create external memory system with context preservation, smart search, and visual breadcrumbs to combat ADHD working memory challenges
 # Details:
-Implement visual time blocks with color coding, elapsed time indicators on all activities, time estimation vs actual tracking, and progressive deadline alerts. Include calendar integration with buffer time calculations.
+1. Build context preservation system:
+   - Task switching context cards
+   - "Where was I?" recovery feature
+   - Automatic session documentation
+   - Visual breadcrumb navigation
+2. Implement smart search:
+   - Fuzzy matching
+   - Natural language queries
+   - Search result previews
+   - Recent searches history
+3. Create related items suggestions
+4. Add voice note attachments
+5. Build quick reference panels
+6. Implement context-aware reminders
 
 # Test Strategy:
-Verify time visualization accuracy, test deadline alerts at various intervals, and validate calendar sync functionality.
+Test context switching scenarios. Verify search accuracy <500ms. Test voice note transcription. Validate breadcrumb navigation.
